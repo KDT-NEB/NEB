@@ -10,6 +10,7 @@ class SignupForm(UserCreationForm):
             "email",
             "nickname",
             "location",
+            "location_detail",
         )
         labels = {
             "username": "아이디",
