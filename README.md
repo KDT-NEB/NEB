@@ -46,8 +46,33 @@ NES팀은 '젊은 예술가들이 직면할 수 밖에 없는 작품의 전시�
 
 
 ## 🧑🏻‍🎓 화면
+- Intro
+<img width="609" alt="스크린샷 2023-01-14 오후 5 34 35" src="https://user-images.githubusercontent.com/80464961/212463695-94a2530f-228e-4fd3-8983-8ebdbdcfd5c0.png">
 
+<img width="552" alt="스크린샷 2023-01-14 오후 5 35 13" src="https://user-images.githubusercontent.com/80464961/212463720-061c7acb-d5fc-4d87-93f0-daf8bddbd124.png">
 
+- Accounts
+<img width="606" alt="스크린샷 2023-01-14 오후 5 35 56" src="https://user-images.githubusercontent.com/80464961/212463744-c403f93a-f8ab-43cb-8166-9e99689445e2.png">
+
+<img width="653" alt="스크린샷 2023-01-14 오후 5 36 32" src="https://user-images.githubusercontent.com/80464961/212463763-c0eaa5df-00c6-45fd-a9a0-210bf75ebe03.png">
+
+- Articles
+<img width="573" alt="스크린샷 2023-01-14 오후 5 37 03" src="https://user-images.githubusercontent.com/80464961/212463776-a4dfbdc2-ba13-49de-85ad-3a69597228e3.png">
+
+- Orders
+<img width="575" alt="스크린샷 2023-01-14 오후 5 37 43" src="https://user-images.githubusercontent.com/80464961/212463809-f1cd6062-5721-4ac8-a140-0b82bdd68c4f.png">
+
+<img width="578" alt="스크린샷 2023-01-14 오후 5 38 03" src="https://user-images.githubusercontent.com/80464961/212463820-6d8f0b20-14f9-4583-ab91-6da50854e100.png">
+
+<img width="578" alt="스크린샷 2023-01-14 오후 5 38 24" src="https://user-images.githubusercontent.com/80464961/212463833-dc3b7f52-219f-4827-85f9-868be8f233e2.png">
+
+- Notes
+<img width="601" alt="스크린샷 2023-01-14 오후 5 39 05" src="https://user-images.githubusercontent.com/80464961/212463856-1431c752-fb61-44c0-b4cd-dce9d2c7fd3f.png">
+
+<img width="633" alt="스크린샷 2023-01-14 오후 5 39 39" src="https://user-images.githubusercontent.com/80464961/212463877-69c943db-72a7-4c81-b4f8-7855c72c2f7b.png">
+
+- Questions
+<img width="588" alt="스크린샷 2023-01-14 오후 5 40 16" src="https://user-images.githubusercontent.com/80464961/212463910-bbbe9a09-976b-42c8-b3c1-7949d7eb04cf.png">
 
 
 ## 🧑🏻‍🎓 팀원
