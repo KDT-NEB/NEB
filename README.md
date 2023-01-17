@@ -30,8 +30,13 @@ NES팀은 '젊은 예술가들이 직면할 수 밖에 없는 작품의 전시�
 
 ## 🧑🏻‍🎓 기술 스택
 ### Front-End
+<img width="713" alt="스크린샷 2023-01-17 오후 6 47 07" src="https://user-images.githubusercontent.com/80464961/212864935-d171bcf3-0789-4ad7-a504-0ec5b989e791.png">
+
 ### Back-End
+<img width="680" alt="스크린샷 2023-01-17 오후 6 48 14" src="https://user-images.githubusercontent.com/80464961/212865193-3040a99f-3977-4957-add0-f23c8a47beda.png">
+
 ### ETC
+<img width="434" alt="스크린샷 2023-01-17 오후 6 51 42" src="https://user-images.githubusercontent.com/80464961/212866003-32e320da-537d-4b21-93c2-95596d04d93b.png">
 
 
 ## 🧑🏻‍🎓 DB 모델링(ERD)
