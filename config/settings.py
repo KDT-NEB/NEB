@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-l(pzq6uqqe-w!=qu^t4hg)()_#3nr-sdd-datzs4j$2n+*769h"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") == "True"
@@ -56,7 +56,7 @@ LIBRARY_APPS = [
     "django.contrib.humanize",
     # 페이지에서 이미지를 삭제했을 때 서버에 남는 파일을 자동으로 지워주는 앱
     # https://pypi.org/project/django-cleanup/
-    # "django_cleanup.apps.CleanupConfig",
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 DEFAULT_APPS = [
@@ -188,7 +188,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

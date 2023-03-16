@@ -20,6 +20,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from accounts.decorators import artist_required
 
+
 # Create your views here.
 
 
@@ -65,7 +66,6 @@ def kakao_callback(request):
     # }
 
     temp = requests.post(kakao_token_api, data=data).json()
-
     access_token = temp["access_token"]
     refresh_token = temp["refresh_token"]
     # print(token_response) # t5Elh2xrH89sIQwsLTkaCrg9ntiOa_68WEzEnuk7CisNIAAAAYTCSQLr
@@ -82,7 +82,6 @@ def kakao_callback(request):
     # 'profile': {'nickname': '이명학', 'thumbnail_image_url': 'http://k.kakaocdn.net/dn/sQ8Lg/btrOcfopF8S/39TsSKwP6jBNBEZ5qSikjK/img_110x110.jpg', 'profile_image_url': 'http://k.kakaocdn.net/dn/sQ8Lg/btrOcfopF8S/39TsSKwP6jBNBEZ5qSikjK/img_640x640.jpg',
     # 'is_default_image': False}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'mhmh779@naver.com'}
     # }
-
     # 이메일 동의 안할시 공백을 주었음
     kakao_id = user_info_response["id"]
     kakao_nickname = user_info_response["properties"]["nickname"]
@@ -92,7 +91,6 @@ def kakao_callback(request):
         else ""
     )
     kakao_profile_image = user_info_response["properties"]["profile_image"]
-
     if get_user_model().objects.filter(test=kakao_id).exists():
         kakao_user = get_user_model().objects.get(test=kakao_id)
         # kakao_user.profileimage = kakao_profile_image
@@ -103,15 +101,27 @@ def kakao_callback(request):
         )
         return redirect("articles:ticket_machine")
     else:
-        kakao_login_user = get_user_model().objects.create(
-            test=kakao_id,
-            nickname=kakao_nickname,
-            # profileimage=kakao_profile_image,
-            email=kakao_email,
-            refresh_token=refresh_token,
+        print(
+            "kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new kakao new "
         )
+        # kakao_login_user = get_user_model().objects.create(
+        #     test=kakao_id,
+        #     nickname=kakao_nickname,
+        #     # profileimage=kakao_profile_image,
+        #     email=kakao_email,
+        #     refresh_token=refresh_token,
+        # )
+        kakao_login_user = get_user_model()()
+        kakao_login_user.username = kakao_id
+        kakao_login_user.test = kakao_id
+        kakao_login_user.nickname = kakao_nickname
+        kakao_login_user.email = kakao_email
+        kakao_login_user.refresh_token = refresh_token
         kakao_login_user.set_password(str(state_token))
-        kakao_login_user.save()
+        try:
+            kakao_login_user.save()
+        except Exception as e:
+            print(e)
         kakao_user = get_user_model().objects.get(test=kakao_id)
         auth_login(
             request, kakao_user, backend="django.contrib.auth.backends.ModelBackend"
@@ -446,7 +456,9 @@ def find_id(request):
     if users.exists():
         user_list = []
         for user in users:
-            if user.username == "":
+            # kakao id를 test에도 저장
+            # 일반 회원은 test 컬럼이 비어있음
+            if user.test == user.username:
                 user_list.append(
                     "<span style='color: var(--highlight);'>Kakao acount</span>"
                 )
