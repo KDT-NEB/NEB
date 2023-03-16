@@ -38,4 +38,4 @@ jobs:
           environment_name: "Nes-env"
           version_label: "python-${{ steps.format-time.outputs.replaced }}"
           region: "ap-northeast-2"
-          deployment_package: deploy.zip
+          deployment_package: nes.zip
