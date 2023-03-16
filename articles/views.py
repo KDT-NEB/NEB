@@ -96,14 +96,21 @@ def detail(request, pk):
             user_recently_view += f"_{target}_"
 
         # 최근 본 작품 개수제한
-        if len(user_recently_view.replace("_", "")) > 6:
+        # 유저의 recently_view 필드에는 _a__b__c__d__e__f_ 형식으로 번호가 저장됨
+        # 언더스코어 두 개를 번호들을 구분짓는 구분자로 볼 수 있다.
+        # replace 후 recently_view 안의 값은 _a,b,c,d,e,f_ 형식으로 바뀐다.
+        if len(user_recently_view.replace("__", ",").split(",")) > 6:
+            # 맨 앞 문자는 언더스코어이기 때문에 숫자부분부터 계산
             i = 1
             while user_recently_view[i] != "_":
+                # 번호 부분이 끝날때까지 계산
                 i += 1
             else:
+                # >>> 맨 앞 번호는 _???__로 되어있는데 번호가 몇 자리가 되었든 번호 다음의 언더스코어부터 계산함
+                # >>> 즉 _???__ 에서 _???_부분을 빼고 _부터 적용
                 user_recently_view = user_recently_view[i + 1 :]
 
-        # 최근 본 작품 꺼내 쓸 때는 replace("__", ",").replace("_", "") 한 다음에 리스트로 바꿔서 꺼내 쓰면 될 것 같음
+        # 최근 본 작품 꺼내 쓸 때는 리스트로 바꿔서 꺼내 쓰면 될 것 같음
         # 스택 자료구조
         user.recently_view = user_recently_view
         user.save()
